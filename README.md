@@ -1,1 +1,1 @@
-# fullstack-app3
+# fullstack-app3 -- Journal App
