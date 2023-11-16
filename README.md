@@ -7,6 +7,7 @@ Full-stack web application that allows users to sign in and create private journ
 ## Features
 
 - User authentication and authorization
+- Saved journal entries 
 - Private journal entries
 - Edit and delete entries
 - Responsive design
