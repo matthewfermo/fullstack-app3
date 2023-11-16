@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Journal</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1>Your Page</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+      <!-- LOCAL INFORMATION -->
+      <main>
+        <section class="container">
+          <h1>Journal</h1>
+          <form action="/journal" method="post">
+            <input type="text" id="new-task" name="title" placeholder="Title Your Entry">
+            <input type="text" id="new-task" name="text" placeholder="Journal Here">
+            <button type="submit" id="addTask">Submit</button>
+          </form>
+          <div class="todo-list box">
+            <h2>Previous Entries</h2>
+            <ul class="messages">
+              <% for(var i=0; i<entries.length; i++) {%>
+                <li class="message">
+                  <p>
+                    <%= entries[i].title %>
+                  </p>
+                  <p>
+                    <%= entries[i].text %>
+                  </p>
+                  <input class="hide" type="text" value="<%= entries[i].text %>">
+                  <p>
+                    <%= entries[i].date %>
+                  </p>
+                  <span><i class="fa-regular fa-pen-to-square"></i></span>
+                  <span class="hide"><i data-id="<%= entries[i]._id %>" class="fa-regular fa-floppy-disk"></i></span>
+                  <span><i data-id="<%= entries[i]._id %>" class="fa fa-trash" aria-hidden="true"></i></span>
+                </li>
+                <% } %>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://kit.fontawesome.com/03bbf37f81.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
