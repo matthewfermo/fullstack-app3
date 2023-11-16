@@ -8,9 +8,9 @@ Full-stack web application that allows users to sign in and create private journ
 
 - User authentication and authorization
 - Private journal entries
-- Responsive design
 - Edit and delete entries
-
+- Responsive design
+  
 ## Technologies Used
 
 - HTML
